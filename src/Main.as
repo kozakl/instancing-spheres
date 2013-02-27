@@ -48,7 +48,7 @@
 			
 			for (var i:int = 0; i < 204; ++i)
 				create();
-			create(700);
+			create(705);
 			
 			for each (var resource:Resource in scene.getResources(true))
 				resource.upload(stage3D.context3D);
@@ -66,7 +66,7 @@
 		{
 			const indices:Vector.<uint> = new Vector.<uint>();
 			for (var i:int = 0; i < num * 72; ++i)
-				indices[indices.length] = i;
+				indices[int(indices.length)] = i;
 			
 			const uv:Vector.<Number> = new Vector.<Number>();
 			for (i = 0; i < num; ++i)
@@ -107,7 +107,7 @@
                 const py:Number = MathUtil.rndRange(-130, 130);
                 const pz:Number = MathUtil.rndRange(-130, 130);
 				
-				createSphere(vertices, 0.003, px, py, pz);
+				createSphere(vertices, 0.004, px, py, pz);
 			}
 			
 			const attributes:Array = new Array();
